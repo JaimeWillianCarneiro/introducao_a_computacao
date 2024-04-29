@@ -24,3 +24,8 @@ lista[pos] = "java"
 new_frase = " ".join(lista)
 
 print(new_frase)
+
+
+nome_idade = "Jaime", 19
+frase = f"Eu sou {nome_idade[0]} e  tenho {nome_idade[1]} anos."
+print(frase)
