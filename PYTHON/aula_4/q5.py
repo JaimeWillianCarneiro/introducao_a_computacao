@@ -1,0 +1,5 @@
+sequencia = input().split()
+set_seq = set(sequencia)
+# print(set_seq)
+lista_ordenada= sorted(list(set_seq))
+print(*lista_ordenada)
