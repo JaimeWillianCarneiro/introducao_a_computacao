@@ -17,7 +17,6 @@ for i in range(len(sequencia_de_senhas)):
         if len(senha) <=12:
             cond5 = True
     
-    print(cond1, cond2, cond3, cond4, cond5)
     if cond1 and cond2 and cond3 and cond4 and cond5:
         aprovadas.append(senha)
 
