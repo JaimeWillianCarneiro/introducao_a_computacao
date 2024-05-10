@@ -21,3 +21,5 @@ while True:
           
      else:
           calcular_total_compras(float(valor))
+
+
