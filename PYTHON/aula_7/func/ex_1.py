@@ -17,7 +17,6 @@ def calculadora(num1: float, num2: float, oper: str):
     else: return divisao()
 
 print(calculadora(1, 2, "soma"))
-
 print(calculadora(1, 2, "multiplicacao"))
 print(calculadora(1, 2, "divisao"))
 print(calculadora(1, 2, "subtracao"))
