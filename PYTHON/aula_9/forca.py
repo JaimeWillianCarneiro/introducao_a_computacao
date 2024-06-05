@@ -43,10 +43,10 @@ def print_estado_atual(palavra: str, caracteres_usados: list, num_tentaiva: int,
     """_summary_
 
     Args:
-        palavra (str): _description_
-        caracteres_usados (list): _description_
-        num_tentaiva (int): _description_
-        num_tentativas_max (int): _description_
+        palavra (str): Palavra a ser descoberta 
+        caracteres_usados (list): caracteres já informados pelo usuário
+        num_tentaiva (int): numero tentativas atual do usuario
+        num_tentativas_max (int): numero limite de tenativas
     """
     mostra_word(palavra, caracteres_usados)
     print(f"Letras já utilizadas: {caracteres_usados} ")
