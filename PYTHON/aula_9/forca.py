@@ -8,8 +8,6 @@ palavras = ["Borboleta", "Oceano",   "Biblioteca", "Girassol", "Coruja", "Chocol
 n_erros = 0 # Numero de erros atual
 n_erros_max = 5 # Numero máximo de erros que  o usuario pode cometer
 
-
-
 def chose_word(palavras: list) -> str:
     """Escolher Aleatoriamente uma palavra para ser a descoberta no jogo
 
