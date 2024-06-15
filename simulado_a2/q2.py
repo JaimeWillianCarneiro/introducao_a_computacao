@@ -38,7 +38,7 @@ def o_venceu(matriz):
         return False
   
 def resultado(matriz: list) -> None:
-   print() 
+   
    if x_venceu(matriz):
        print(0)
    elif o_venceu(matriz):
@@ -47,8 +47,8 @@ def resultado(matriz: list) -> None:
        print(-1)
        
 
-tabuleiro = [["X", "O", "O"],["O", "X", "O"],
-["X", "O", "X"]]
+tabuleiro = [["X", "O", "X"],["O", "X", "O"],
+["X", "O", "O"]]
 
 
 resultado(tabuleiro)
