@@ -47,8 +47,43 @@ def resultado(matriz: list) -> None:
        print(-1)
        
 
-tabuleiro = [["X", "O", "X"],["O", "X", "O"],
-["X", "O", "O"]]
+tabuleiro = [["O", "X", "O"],["O", "X", "O"],
+["X", "O", "X"]]
 
 
-resultado(tabuleiro)
+
+
+
+def verificar_vencedor(tabuleiro):
+    # Verifica linhas
+    vencedor = False
+    for linha in tabuleiro:
+        if linha[0] == linha[1] == linha[2]:
+            #complete aqui
+            vencedor = linha[0]
+            break
+    
+    # Verifica colunas
+    for i in range(3):
+        #  complete aqui
+        if tabuleiro[0][i] ==  tabuleiro[1][i] ==  tabuleiro[2][i]:
+            vencedor =  tabuleiro[0][i]
+            break
+            #complete aqui
+    
+    # Verifica diagonais
+    if tabuleiro[0][0] == tabuleiro[1][1] == tabuleiro[2][2]:
+        vencedor = tabuleiro[0][0]
+        #complete aqui
+    #complete aqui
+    if tabuleiro[0][2] == tabuleiro[1][1] == tabuleiro[2][0]:
+        vencedor =  tabuleiro[0][2]
+        #complete aqui
+    
+    
+    if vencedor:
+        if vencedor =="X": return 0
+        else: return 1
+    else: return -1
+            
+print(verificar_vencedor(tabuleiro))
