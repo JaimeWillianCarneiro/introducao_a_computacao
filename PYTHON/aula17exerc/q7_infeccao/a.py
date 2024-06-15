@@ -22,6 +22,10 @@ def propagar_infeccao(linhas, colunas, polos)-> list:
         matriz[coordY][coordX] = 1
         
         linhas_acima =0
+        linhas_abaixo =0
+        colunas_direita = 0 
+        colunas_esquerda = 0 
+        
         #  Vendo quantas linhas acimas posso passar
         if coordY - raio <0:
             linhas_acima = coordY
@@ -44,20 +48,23 @@ def propagar_infeccao(linhas, colunas, polos)-> list:
             colunas_direita = n-1 - coordX
         else:
             colunas_direita = raio
-        
             
-        linhas_abaixo =0
-        colunas_direita = 0 
-        colunas_esquerda = 0 
         
         # Analisar a linha atual e as r linhas acima e r linhas 
         #  Abaixo. Sendo assim iriamos analisar (2r+1)*(2r+1)-1 casas
         
         #  Analisando a direita
-    
-    pass
+
+        for linha in range(coordY-linhas_acima, coordY+ linhas_abaixo+1):
+            
+            for coluna in range(coordX-colunas_esquerda, coordX+colunas_direita+1):
+                matriz[linha][coluna]=1
+        
+    return matriz
+     
 resultado = propagar_infeccao(m, n, polos_de_infeccao)
-print(resultado)
+for linha in resultado:
+    print(*linha)
 # 0 0 0 0 0
 # 0 1 1 1 0
 # 0 1 1 1 0
