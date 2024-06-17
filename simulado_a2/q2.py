@@ -52,8 +52,6 @@ tabuleiro = [["O", "X", "O"],["O", "X", "O"],
 
 
 
-
-
 def verificar_vencedor(tabuleiro):
     # Verifica linhas
     vencedor = False

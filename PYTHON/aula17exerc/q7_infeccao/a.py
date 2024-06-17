@@ -3,14 +3,6 @@ n = 5
 polos_de_infeccao = [(2, 2, 1), (4, 4, 2)]
 
 
-def distancia(pontoA, pontoB):
-    xA, yA = pontoA[0], pontoA[1]
-    xB, yB = pontoB[0], pontoB[1]
-    
-    distancia = ((xA-xB)**2 + (yA-yB)**2)**(1/2)
-    return distancia
-
-
 def propagar_infeccao(linhas, colunas, polos)-> list:
     matriz = [[0 for _ in range(colunas)] for _ in range(linhas)]
     
@@ -32,7 +24,7 @@ def propagar_infeccao(linhas, colunas, polos)-> list:
         else:
             linhas_acima = raio
         
-        #  vendo colunas a esquerda posso infectar
+        #  vendo colunas a esquerda  q posso infectar
         if coordX - raio <0:
             colunas_esquerda=coordX
         else: colunas_esquerda= raio
@@ -53,7 +45,6 @@ def propagar_infeccao(linhas, colunas, polos)-> list:
         # Analisar a linha atual e as r linhas acima e r linhas 
         #  Abaixo. Sendo assim iriamos analisar (2r+1)*(2r+1)-1 casas
         
-        #  Analisando a direita
 
         for linha in range(coordY-linhas_acima, coordY+ linhas_abaixo+1):
             
